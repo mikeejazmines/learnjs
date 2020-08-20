@@ -5,7 +5,7 @@ function ageInDays() {
     var currDate = new Date();
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 
-    const diffDays = Math.round(Math.abs((currDate - birthDate) / oneDay));
+    const diffDays = Math.floor(Math.abs((currDate - birthDate) / oneDay));
     var h1 = document.createElement("h1");
     var textAnswer = document.createTextNode(
         "You are " + diffDays + " days old."
