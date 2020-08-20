@@ -1,0 +1,169 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="static/css/style.css" />
+        <title>Learn Javascript</title>
+    </head>
+    <body>
+        <div class="main">
+            <h1 id="someText">Learn Javascript through Youtube</h1>
+            <p>
+                Everything here is based on
+                <a href="https://www.youtube.com/watch?v=Qqx_wzMmFeA"
+                    >this Youtube video</a
+                >
+            </p>
+        </div>
+
+        <hr />
+
+        <div class="container-1">
+            <h2>Challenge 1: Age in days</h2>
+            <div class="flex-box-container-1">
+                <div>
+                    <button class="btn btn-primary" onclick="ageInDays()">
+                        Click me
+                    </button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="reset()">
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex-box-container-1">
+                <div id="flex-box-result"></div>
+            </div>
+        </div>
+
+        <div class="container-2">
+            <h2>Challenge 2: Puppy Generator</h2>
+            <div class="flex-box-container-1">
+                <div>
+                    <button class="btn btn-success" onclick="generatePuppy()">
+                        Generate Puppy
+                    </button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="resetC2()">
+                        Reset
+                    </button>
+                </div>
+            </div>
+            <div class="flex-box-container-2" id="puppy"></div>
+        </div>
+
+        <div class="container-3">
+            <h3>Challenge 3: Rock, Paper, Scissors</h3>
+            <button
+                class="btn btn-danger"
+                style="margin-bottom: 10px;"
+                onclick="resetC3()"
+            >
+                Reset
+            </button>
+            <div class="flex-box-rps" id="flex-box-rps-div">
+                <img
+                    id="rock"
+                    src="https://vignette.wikia.nocookie.net/custard/images/0/0b/Rock.png/revision/latest?cb=20180930085333"
+                    height="150"
+                    width="150"
+                    onclick="rpsGame(this)"
+                />
+                <img
+                    id="paper"
+                    src="https://img.pngio.com/a-stack-white-paper-png-image-royalty-free-stock-png-images-for-white-paper-png-256_256.png"
+                    height="150"
+                    width="150"
+                    onclick="rpsGame(this)"
+                />
+                <img
+                    id="scissors"
+                    src="https://www.shareicon.net/data/2015/10/26/140001_scissors_256x256.png"
+                    height="150"
+                    width="150"
+                    onclick="rpsGame(this)"
+                />
+            </div>
+        </div>
+
+        <div class="container-4">
+            <h3>Challenge 4: Button Color Changer</h3>
+            <div class="flex-box-change-color">
+                <form action="">
+                    <select
+                        name="colors"
+                        id="colors"
+                        onchange="changeColor(this)"
+                    >
+                        <option value="red">red</option>
+                        <option value="blue">blue</option>
+                        <option value="yellow">yellow</option>
+                        <option value="green">green</option>
+                        <option value="random">random</option>
+                    </select>
+                </form>
+
+                <div>
+                    <button class="btn btn-primary">One</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger">Two</button>
+                </div>
+                <div>
+                    <button class="btn btn-success">Three</button>
+                </div>
+                <div>
+                    <button class="btn btn-warning">Four</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-5">
+            <h3>Challenge 5: Blackjack</h3>
+            <h4><span id="blackjack-result">Let's play!</span></h4>
+            <div class="blackjack-row-1">
+                <div id="your-box">
+                    <h3>You: <span id="your-blackjack-result">0</span></h3>
+                </div>
+
+                <div id="dealer-box">
+                    <h3>Dealer: <span id="dealer-blackjack-result">0</span></h3>
+                </div>
+            </div>
+
+            <div class="blackjack-row-2">
+              <div>
+                <button class="btn-lg btn-primary mr-2" id="hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr-2" id="stand-button">Stand</button>
+                <button class="btn-lg btn-danger mr-2" id="deal-button">Deal</button>
+              </div>
+            </div>
+            <div class="blackjack-row-3">
+              <table class="table" style="border: 1px solid black; width:50%;">
+                <tr>
+                  <th>Wins</th>
+                  <th>Losses</th>
+                  <th>Draws</th>
+                </tr>
+                <tr>
+                  <td><span id="win-score">0</span></td>
+                  <td><span id="loss-score">0</span></td>
+                  <td><span id="draw-score">0</span></td>
+                </tr>
+
+              </table>
+            </div>
+        </div>
+
+        <script src="static/js/index.js"></script>
+    </body>
+</html>
