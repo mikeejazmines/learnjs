@@ -13,4 +13,4 @@ All the activities were based off[this](https://www.youtube.com/watch?v=Qqx_wzMm
 
 To run, clone/download the repo and open the index.html file.
 
-Future javascript projects may also be placed here.
+Future javascript projects may also be placed here
