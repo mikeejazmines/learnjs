@@ -187,7 +187,7 @@ function blackjackHit() {
 
 var stopGame = false;
 
-function blackjackStand() {
+async function blackjackStand() {
     while (!stopGame) {
         var image = document.createElement("img");
 
@@ -220,6 +220,7 @@ function blackjackStand() {
                 checkWinner();
             }
         }
+        await new Promise(r => setTimeout(r, 300));
     }
 }
 
